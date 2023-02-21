@@ -36,6 +36,7 @@ public class Hometest{
         $(".modal-body").shouldHave(text("13 March,1980"));
         $(".modal-body").shouldHave(text("Physics"));
         $(".modal-body").shouldHave(text("Reading"));
+        $(".modal-body").shouldHave(text("3.png"));
         $(".modal-body").shouldHave(text("Lesoparkovaya str 4"));
         $(".modal-body").shouldHave(text("Uttar Pradesh Agra"));
         $("#closeLargeModal").click();
