@@ -1,7 +1,5 @@
-import org.junit.jupiter.api.Test;
-
 public class Hometest6 {
-    @Test
+
     public static void main(String[] args) {
         //Арифметические операторы
         int a = 10;
