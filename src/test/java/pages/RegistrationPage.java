@@ -13,13 +13,13 @@ public class RegistrationPage {
     CalendarComponent calendarComponent = new CalendarComponent();
     RegistrationResultsModal registrationResultsModal = new RegistrationResultsModal();
     private SelenideElement
-            firstNameInput =  $("#firstName"),
-            lastNameInput =  $("#lastName"),
+            firstNameInput = $("#firstName"),
+            lastNameInput = $("#lastName"),
             userEmail = $("#userEmail"),
-            userGenter =  $("#genterWrapper"),
+            userGender = $("#genterWrapper"),
             userNumber = $("#userNumber"),
             userSubjects = $("#subjectsInput"),
-            userHobbies =  $("#hobbiesWrapper"),
+            userHobbies = $("#hobbiesWrapper"),
             userPicture = $("#uploadPicture"),
             userCurrentAddress = $("#currentAddress"),
             userState = $("#state"),
@@ -36,7 +36,7 @@ public class RegistrationPage {
 
     }
 
-    public void setFirstName(String value){
+    public void setFirstName(String value) {
 
         firstNameInput.setValue(value);
     }
@@ -50,9 +50,9 @@ public class RegistrationPage {
 
         userEmail.setValue(value);
     }
-    public void setGenter(String value) {
 
-        userGenter.$(byText(value)).click();
+    public void setGender(String value) {
+        userGender.$(byText(value)).click();
     }
 
     public void setNumber(String value) {
@@ -64,7 +64,8 @@ public class RegistrationPage {
     }
 
     public void setHobbies(String hobbies) {
-        userHobbies.$(byText(hobbies)).click();;
+        userHobbies.$(byText(hobbies)).click();
+        ;
     }
 
     public void setPictures(String location) {
@@ -89,19 +90,19 @@ public class RegistrationPage {
         submitButton.click();
     }
 
-    public void verifyResoultsModal () {
+    public void verifyResultsModal() {
         registrationResultsModal.submittingForm();
     }
 
-    public void verifyResoults (String key, String value) {
+    public void verifyResults(String key, String value) {
         registrationResultsModal.formResoults(key, value);
     }
 
-    public void clickClose () {
+    public void clickClose() {
         closeButton.click();
     }
 
-    public void setBirthDay (String day, String month, String year) {
+    public void setBirthDay(String day, String month, String year) {
         calendarComponent.setDate(day, month, year);
     }
 }

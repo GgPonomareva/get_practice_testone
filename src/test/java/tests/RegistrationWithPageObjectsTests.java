@@ -12,7 +12,7 @@ public class RegistrationWithPageObjectsTests {
         String userName = "Galina";
         String lastName = "Ponomareva";
         String userEmail = "li.c@mail.ru";
-        String userGenter = "Female";
+        String userGender = "Female";
         String userNumber = "9096201240";
         String userBirthDay_day = "30";
         String userBirthDay_month = "January";
@@ -29,7 +29,7 @@ public class RegistrationWithPageObjectsTests {
         registrationPage.setFirstName(userName);
         registrationPage.setLastName(lastName);
         registrationPage.setEmail(userEmail);
-        registrationPage.setGenter(userGenter);
+        registrationPage.setGender(userGender);
         registrationPage.setNumber(userNumber);
         registrationPage.setBirthDay(userBirthDay_day, userBirthDay_month, userBirthDay_year);
         registrationPage.setSubjects(userSubjects);
@@ -40,16 +40,16 @@ public class RegistrationWithPageObjectsTests {
         registrationPage.setCity(userCity);
 
         registrationPage.clickSubmit();
-        registrationPage.verifyResoultsModal();
-        registrationPage.verifyResoults("Student Name", userName + " " + lastName);
-        registrationPage.verifyResoults("Student Email", userEmail);
-        registrationPage.verifyResoults("Gender", userGenter);
-        registrationPage.verifyResoults("Mobile", userNumber);
-        registrationPage.verifyResoults("Date of Birth", userBirthDay_day + " " + userBirthDay_month + "," + userBirthDay_year);
-        registrationPage.verifyResoults("Subjects", userSubjects);
-        registrationPage.verifyResoults("Hobbies", userHobbies);
-        registrationPage.verifyResoults("Address", userAddress);
-        registrationPage.verifyResoults("State and City", userState + " " + userCity);
+        registrationPage.verifyResultsModal();
+        registrationPage.verifyResults("Student Name", userName + " " + lastName);
+        registrationPage.verifyResults("Student Email", userEmail);
+        registrationPage.verifyResults("Gender", userGender);
+        registrationPage.verifyResults("Mobile", userNumber);
+        registrationPage.verifyResults("Date of Birth", userBirthDay_day + " " + userBirthDay_month + "," + userBirthDay_year);
+        registrationPage.verifyResults("Subjects", userSubjects);
+        registrationPage.verifyResults("Hobbies", userHobbies);
+        registrationPage.verifyResults("Address", userAddress);
+        registrationPage.verifyResults("State and City", userState + " " + userCity);
 
         registrationPage.clickClose();
 
