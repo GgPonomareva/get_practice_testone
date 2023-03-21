@@ -10,6 +10,7 @@ repositories {
 }
 
 dependencies {
+    implementation 'net.lingala.zip4j:zip4j:2.11.5'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
     testImplementation 'com.codeborne:selenide:6.12.3'
     testImplementation 'com.codeborne:pdf-test:1.5.0'
@@ -19,6 +20,7 @@ dependencies {
     implementation 'com.github.javafaker:javafaker:1.0.2'
     testImplementation 'com.fasterxml.jackson.core:jackson-databind:2.13.1'
     testImplementation 'com.fasterxml.jackson.core:jackson-core:2.13.1'
+    testImplementation 'com.google.code.gson:gson:2.10.1'
     }
 
 
