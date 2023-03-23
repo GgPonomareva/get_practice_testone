@@ -35,7 +35,6 @@ public class NewZipTests {
         extractThem(archiveName);
     }
 
-    // Get entry from archve block
 
     private ZipEntry getFileEntryFromArchive(String archiveName, String filename) throws IOException {
         ZipEntry entry;
@@ -82,7 +81,6 @@ public class NewZipTests {
         System.out.println(csvEntry.getSize());
     }
 
-    // Extract them with zip4j block
 
     void extractThem(String archiveName) throws ZipException, URISyntaxException {
 
@@ -140,9 +138,10 @@ public class NewZipTests {
 
     }
 
+
     private ZipInputStream getStreamFromArchive(String archiveName, String filename) throws IOException {
 
-        // Открываем стримы.
+
         ZipEntry entry;
         ZipInputStream zis;
         InputStream is = cl.getResourceAsStream(archiveName);
@@ -150,9 +149,11 @@ public class NewZipTests {
 
         while ((entry = zis.getNextEntry()) != null) {
 
+
             if (entry.getName().endsWith(filename)) return zis;
 
         }
+
 
         is.close();
         zis.close();
